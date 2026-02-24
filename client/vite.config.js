@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'https://task-master-plzn.onrender.com/'
+        target: 'https://task-master-plzn.onrender.com/',
         changeOrigin: true,
         secure: false,
       }
