@@ -10,28 +10,30 @@ import employeeRoute from "./router/employeeRoute.js";
 dotenv.config();
 
 const app = express();
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res.send("Project Management API");
+  res.send("Project Management API");
 });
-connectDB()
-
+connectDB();
 
 // Auth Routes
-app.use('/api/auth', authRoute)
+app.use("/api/auth", authRoute);
 
 // Admin Routes
-app.use('/api/admin', adminRoute)
+app.use("/api/admin", adminRoute);
 
 // Manager Routes
-app.use('/api/manager', managerRoute)
+app.use("/api/manager", managerRoute);
 
 // Employee Routes
-app.use('/api/employee', employeeRoute)
+app.use("/api/employee", employeeRoute);
 
-app.use(errorHandler)
+app.use(errorHandler);
+
 app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`.bgBlue);
+  console.log(`Server is running on port ${process.env.PORT}`.bgBlue);
 });
+
+export default app;
