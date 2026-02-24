@@ -144,7 +144,7 @@ export default function MyProjects() {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-3 pt-2">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-2 pt-2">
                   <Link
                     to={`/manager/tasks?projectId=${p._id}`}
                     className="flex-1 px-4 py-2 bg-sky-50 hover:bg-sky-100 text-sky-700 text-sm font-medium rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
@@ -159,7 +159,7 @@ export default function MyProjects() {
                   </button>
                   <button
                     onClick={() => handleReleaseClick(p)}
-                    className="px-4 py-2 bg-white border border-rose-200 hover:bg-rose-50 text-rose-600 text-sm font-medium rounded-xl transition-all shadow-sm flex items-center gap-2 cursor-pointer"
+                    className="px-4 py-2 bg-white border border-rose-200 hover:bg-rose-50 text-rose-600 text-sm font-medium rounded-xl transition-all shadow-sm flex items-center justify-center sm:justify-start gap-2 cursor-pointer w-full sm:w-auto"
                     title="Release Project"
                   >
                     <XCircle size={16} /> Release

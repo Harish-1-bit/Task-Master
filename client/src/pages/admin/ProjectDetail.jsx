@@ -30,7 +30,7 @@ export default function ProjectDetail() {
   const { project, isLoading } = useSelector((state) => state.project);
   const [editing, setEditing] = useState(false);
   const [form, setForm] = useState({});
-  console.log(project)
+  console.log(project);
   useEffect(() => {
     dispatch(getProject(id));
     return () => dispatch(clearProject());
@@ -285,7 +285,7 @@ export default function ProjectDetail() {
           {tasks.map((t) => (
             <div
               key={t._id}
-              className="bg-white rounded-lg border border-slate-200 hover:shadow-sm transition-shadow p-5 border-l-4 border-l-indigo-500 flex items-center justify-between"
+              className="bg-white rounded-lg border border-slate-200 hover:shadow-sm transition-shadow p-5 border-l-4 border-l-indigo-500 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
             >
               <div>
                 <p className="font-bold text-slate-900 text-lg mb-1">
