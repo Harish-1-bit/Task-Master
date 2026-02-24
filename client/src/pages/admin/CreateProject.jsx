@@ -10,10 +10,10 @@ export default function CreateProject() {
   const navigate = useNavigate();
   const { isLoading, isError, message } = useSelector((state) => state.project);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const data = { ...form, tags: form.tags ? form.tags.split(',').map(t => t.trim()) : [] };
-    const result = await dispatch(createProject(data));
+    const result = dispatch(createProject(data));
     if (!result.error) {
       dispatch(reset());
       navigate('/admin/projects');

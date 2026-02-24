@@ -13,7 +13,7 @@ import {
   Save,
   X,
   Calendar,
-  DollarSign,
+  IndianRupeeIcon,
   Tag,
   Activity,
   Users,

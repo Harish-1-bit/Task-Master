@@ -6,7 +6,7 @@ import {
   reset,
 } from "../../features/project/projectSlice";
 import Loader from "../../components/Loader";
-import { Search, Calendar, DollarSign, Tag, CheckCircle2 } from "lucide-react";
+import { Search, Calendar, DollarSign, Tag, CheckCircle2, IndianRupeeIcon } from "lucide-react";
 
 export default function AvailableProjects() {
   const dispatch = useDispatch();
@@ -98,7 +98,7 @@ export default function AvailableProjects() {
                   </span>
                   {p.budget > 0 && (
                     <span className="flex items-center gap-1.5">
-                      <DollarSign size={14} className="text-slate-400" /> ₹
+                      <IndianRupeeIcon size={14} className="text-slate-400" />
                       {p.budget}
                     </span>
                   )}
