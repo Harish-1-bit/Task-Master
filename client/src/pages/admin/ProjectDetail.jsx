@@ -224,7 +224,7 @@ export default function ProjectDetail() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-slate-500">
-                      <DollarSign size={16} />{" "}
+                      <IndianRupeeIcon size={16} />{" "}
                       <span className="text-sm">Budget</span>
                     </div>
                     <span className="font-semibold text-sm text-slate-900">
