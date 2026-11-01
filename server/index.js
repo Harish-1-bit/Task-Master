@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
+import cors from "cors";
 import colors from "colors";
 import connectDB from "./config/dbConfig.js";
 import errorHandler from "./middleware/errorMiddleWare.js";
@@ -10,6 +11,13 @@ import employeeRoute from "./router/employeeRoute.js";
 dotenv.config();
 
 const app = express();
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
